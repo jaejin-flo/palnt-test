@@ -1,6 +1,10 @@
 @startuml
-[*] --> Running: Start
-Running --> Pause: Pause
-Pause --> Running: Resume
-Running --> [*]: Stop
+actor client
+node app
+node car
+node tshirt
+
+car -> app
+app -> client
+client -> tshirt
 @enduml
